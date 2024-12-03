@@ -3,7 +3,8 @@ import { PresentationControls, Stage, useGLTF } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
-import { Model } from "./Model";
+// import { Model } from "./Model";
+import { Model } from "./Scene";
 
 function ProductViewer(props) {
   const { customization } = props;

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ergonomic office chair
+* source:	https://sketchfab.com/3d-models/ergonomic-office-chair-11161117c2c142bd8307d2c3975ee730
+* author:	paolodl (https://sketchfab.com/paolodl)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ergonomic office chair" (https://sketchfab.com/3d-models/ergonomic-office-chair-11161117c2c142bd8307d2c3975ee730) by paolodl (https://sketchfab.com/paolodl) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
