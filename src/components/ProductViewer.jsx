@@ -3,11 +3,11 @@ import { PresentationControls, Stage, useGLTF } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
-// import { Model } from "./Model";
-import { Model } from "./Scene";
+import { ChairModel } from "./Scene";
+import { Model } from "./SofaModel";
 
 function ProductViewer(props) {
-  const { customization } = props;
+  const { customization, isConfigurator } = props;
 
   return (
     <>
@@ -19,7 +19,11 @@ function ProductViewer(props) {
       >
         <Stage intensity={0.6} castShadow={false}>
           <Suspense fallback={null}>
-            <Model customization={customization} />
+            {isConfigurator ? (
+              <Model customization={customization} />
+            ) : (
+              <ChairModel customization={customization} />
+            )}
           </Suspense>
         </Stage>
       </PresentationControls>

@@ -11,7 +11,7 @@ import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-export function Model(props) {
+export function ChairModel(props) {
   const { nodes, materials } = useGLTF("chair/scene.gltf");
   const { customization } = props;
 
