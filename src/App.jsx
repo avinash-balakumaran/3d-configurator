@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
 import Configurator from "./pages/Configurator";
 import SofaConfigurator from "./pages/SofaConfigurator";
+import ChairConfigurator from "./pages/chairConfigurator";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/configurator" element={<Configurator />} />
           <Route path="/sofa-configurator" element={<SofaConfigurator />} />
+
+          <Route path="chair-configurator" element={<ChairConfigurator />} />
         </Routes>
       </BrowserRouter>
     </>

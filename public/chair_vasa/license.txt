@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chair Vasa
+* source:	https://sketchfab.com/3d-models/chair-vasa-ba810cbc547d43e7961a52854a42dd7d
+* author:	InGameStudio (https://sketchfab.com/ingamestudio)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chair Vasa" (https://sketchfab.com/3d-models/chair-vasa-ba810cbc547d43e7961a52854a42dd7d) by InGameStudio (https://sketchfab.com/ingamestudio) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

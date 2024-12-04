@@ -11,6 +11,7 @@ import { Suspense } from "react";
 import { ChairModel } from "./Scene";
 import { Model } from "./SofaModel";
 import { SofaSetModel } from "./SofaSetModel";
+import { ModernChairModel } from "./ModernChair";
 
 function ProductViewer(props) {
   const { customization, isConfigurator, isSofaConfigurator, configurator } =
@@ -36,6 +37,10 @@ function ProductViewer(props) {
 
             {configurator === "longSofa" && (
               <SofaSetModel customization={customization} />
+            )}
+
+            {configurator === "modernChair" && (
+              <ModernChairModel customization={customization} />
             )}
           </Suspense>
         </Stage>
