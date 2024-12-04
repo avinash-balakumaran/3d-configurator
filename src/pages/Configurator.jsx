@@ -6,7 +6,7 @@ import { FABRIC_LIST, WOOD_LIST } from "../constant/mock";
 function Configurator() {
   const [customization, setCustomization] = useState({
     fabric:
-      "https://assets.3dcloud.io/production/vcn/var/000052/0000055a/Image/256.png",
+      "https://assets.3dcloud.io/production/vcn/var/000052/0000055b/Image/256.png",
     wood: "/sofa/wood/wood1.jpg",
     color: "",
   });
@@ -15,7 +15,11 @@ function Configurator() {
     <div className="app">
       <div className="productViewContainer">
         <Canvas>
-          <ProductViewer customization={customization} isConfigurator={true} />
+          <ProductViewer
+            customization={customization}
+            isConfigurator={true}
+            configurator="sofa"
+          />
         </Canvas>
       </div>
 

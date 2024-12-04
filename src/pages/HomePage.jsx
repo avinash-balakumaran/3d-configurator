@@ -16,7 +16,7 @@ function HomePage() {
       <div className="app">
         <div className="productViewContainer">
           <Canvas>
-            <ProductViewer customization={customization} />
+            <ProductViewer customization={customization} configurator="chair" />
           </Canvas>
         </div>
         <div className="customizerContainer">
