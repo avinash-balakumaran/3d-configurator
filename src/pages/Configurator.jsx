@@ -8,6 +8,7 @@ function Configurator() {
     fabric:
       "https://assets.3dcloud.io/production/vcn/var/000052/0000055a/Image/256.png",
     wood: "/sofa/wood/wood1.jpg",
+    color: "",
   });
 
   return (
@@ -20,7 +21,7 @@ function Configurator() {
 
       <div className="customizerContainer">
         <div className="customizer">
-          <b>Select a texture</b>
+          <b>Select a fabric</b>
           <div className="fabricListGrid">
             {FABRIC_LIST.map((value) => (
               <>
@@ -56,6 +57,23 @@ function Configurator() {
                 />
               </>
             ))}
+          </div>
+        </div>
+
+        <div className="customizer">
+          <b>Select a Color</b>
+
+          <div>
+            <input
+              type="color"
+              value={customization.color}
+              onChange={(e) => {
+                setCustomization({
+                  ...customization,
+                  color: e.target.value,
+                });
+              }}
+            />
           </div>
         </div>
       </div>

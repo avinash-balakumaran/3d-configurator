@@ -45,7 +45,12 @@ export function Model(props) {
           position={[0.16, 72.23, -0.012]}
           rotation={[-Math.PI / 2, 0, 0]}
         >
-          {customization.fabric && <meshStandardMaterial {...textureProps} />}
+          {customization.fabric && (
+            <meshStandardMaterial
+              {...textureProps}
+              color={customization.color}
+            />
+          )}
         </mesh>
         <mesh
           geometry={nodes["02_2_0"].geometry}

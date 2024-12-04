@@ -4,12 +4,17 @@ import Configurator from "./pages/Configurator";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/configurator" element={<Configurator />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <div class="title-container">
+        <h1 class="title">Ziffity Product Configurator</h1>
+      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/configurator" element={<Configurator />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
