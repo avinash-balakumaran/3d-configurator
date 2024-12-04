@@ -19,3 +19,46 @@ export const WOOD_LIST = [
   "/sofa/wood/wood5.jpg",
   "/sofa/wood/wood6.jpg",
 ];
+
+export const NEW_FABRIC_LIST = [
+  {
+    name: "Soft Fabric",
+    color: "/assets/textures/Fabric008_1K-JPG/Fabric008_1K-JPG_Color.jpg",
+    normal: "/assets/textures/Fabric008_1K-JPG/Fabric008_1K-JPG_NormalGL.jpg",
+    roughness:
+      "/assets/textures/Fabric008_1K-JPG/Fabric008_1K-JPG_Roughness.jpg",
+    ao: "/assets/textures/Fabric008_1K-JPG/Fabric008_1K-JPG_AmbientOcclusion.jpg",
+  },
+  {
+    name: "Woven Fabric",
+    color: "/assets/textures/Fabric018_1K-JPG/Fabric018_1K-JPG_Color.jpg",
+    normal: "/assets/textures/Fabric018_1K-JPG/Fabric018_1K-JPG_NormalGL.jpg",
+    roughness:
+      "/assets/textures/Fabric018_1K-JPG/Fabric018_1K-JPG_Roughness.jpg",
+    ao: "/assets/textures/Fabric018_1K-JPG/Fabric018_1K-JPG_AmbientOcclusion.jpg",
+  },
+  {
+    name: "Textured Fabric",
+    color: "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_Color.jpg",
+    normal: "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_NormalGL.jpg",
+    roughness:
+      "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_Roughness.jpg",
+    ao: "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_AmbientOcclusion.jpg",
+  },
+  {
+    name: "Leather",
+    color: "/assets/textures/Leather037_1K-JPG/Leather037_1K-JPG_Color.jpg",
+    normal: "/assets/textures/Leather037_1K-JPG/Leather037_1K-JPG_NormalGL.jpg",
+    roughness:
+      "/assets/textures/Leather037_1K-JPG/Leather037_1K-JPG_Roughness.jpg",
+    ao: "/assets/textures/Leather037_1K-JPG/Leather037_1K-JPG_AmbientOcclusion.jpg",
+  },
+  {
+    name: "Wicker",
+    color: "/assets/textures/Wicker004_1K-JPG/Wicker004_1K-JPG_Color.jpg",
+    normal: "/assets/textures/Wicker004_1K-JPG/Wicker004_1K-JPG_NormalGL.jpg",
+    roughness:
+      "/assets/textures/Wicker004_1K-JPG/Wicker004_1K-JPG_Roughness.jpg",
+    ao: "/assets/textures/Wicker004_1K-JPG/Wicker004_1K-JPG_AmbientOcclusion.jpg",
+  },
+];
