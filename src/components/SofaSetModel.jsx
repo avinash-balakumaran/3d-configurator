@@ -18,18 +18,14 @@ export function SofaSetModel(props) {
 
   console.log(customization, "cusss");
 
-  if (Object.keys(customization.texture).length > 0) {
-    console.log("aaaaaaa");
-
+  if (customization.fabric) {
     textureProps = useTexture({
-      map: customization.texture.color,
+      map: customization.fabric,
     });
 
     textureProps.map.repeat.set(2, 2);
     textureProps.map.wrapS = textureProps.map.wrapT = THREE.RepeatWrapping;
   }
-
-  // console.log(customization, "cussssss");
 
   return (
     <group {...props} dispose={null}>

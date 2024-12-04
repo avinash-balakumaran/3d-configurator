@@ -62,3 +62,12 @@ export const NEW_FABRIC_LIST = [
     ao: "/assets/textures/Wicker004_1K-JPG/Wicker004_1K-JPG_AmbientOcclusion.jpg",
   },
 ];
+
+export const NEW_TEXTURE_LIST = [
+  "/assets/textures/Fabric008_1K-JPG/Fabric008_1K-JPG_Color.jpg",
+  "/assets/textures/Fabric018_1K-JPG/Fabric018_1K-JPG_Color.jpg",
+  "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_Color.jpg",
+  "/assets/textures/Wicker004_1K-JPG/Wicker004_1K-JPG_Color.jpg",
+  "/assets/textures/Leather037_1K-JPG/Leather037_1K-JPG_Color.jpg",
+  "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_Color.jpg",
+];

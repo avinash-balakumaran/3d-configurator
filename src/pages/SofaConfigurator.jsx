@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import ProductViewer from "../components/ProductViewer";
-import { NEW_FABRIC_LIST, WOOD_LIST } from "../constant/mock";
+import { NEW_FABRIC_LIST, NEW_TEXTURE_LIST, WOOD_LIST } from "../constant/mock";
 
 function SofaConfigurator() {
   const [customization, setCustomization] = useState({
-    texture: {},
+    fabric: "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_Color.jpg",
     wood: "/sofa/wood/wood1.jpg",
     color: "",
   });
@@ -25,15 +25,15 @@ function SofaConfigurator() {
         <div className="customizer">
           <b>Select a fabric</b>
           <div className="fabricListGrid">
-            {NEW_FABRIC_LIST.map((value) => (
+            {NEW_TEXTURE_LIST.map((value) => (
               <img
-                src={value.color}
+                src={value}
                 height={100}
                 width={100}
                 onClick={() => {
                   setCustomization({
                     ...customization,
-                    texture: value,
+                    fabric: value,
                   });
                 }}
               />
