@@ -11,7 +11,7 @@ import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-export function Model(props) {
+export function SofaSetModel(props) {
   const { nodes, materials } = useGLTF("/sofa_set.glb");
   const { customization } = props;
   let textureProps;

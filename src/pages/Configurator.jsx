@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import ProductViewer from "../components/ProductViewer";
-import { FABRIC_LIST, NEW_FABRIC_LIST, WOOD_LIST } from "../constant/mock";
+import { FABRIC_LIST, WOOD_LIST } from "../constant/mock";
 
 function Configurator() {
   const [customization, setCustomization] = useState({
-    // fabric:
-    //   "https://assets.3dcloud.io/production/vcn/var/000052/0000055a/Image/256.png",
-
-    texture: {},
+    fabric:
+      "https://assets.3dcloud.io/production/vcn/var/000052/0000055b/Image/256.png",
     wood: "/sofa/wood/wood1.jpg",
     color: "",
   });
@@ -17,7 +15,11 @@ function Configurator() {
     <div className="app">
       <div className="productViewContainer">
         <Canvas>
-          <ProductViewer customization={customization} isConfigurator={true} />
+          <ProductViewer
+            customization={customization}
+            isConfigurator={true}
+            configurator="sofa"
+          />
         </Canvas>
       </div>
 
@@ -25,21 +27,7 @@ function Configurator() {
         <div className="customizer">
           <b>Select a fabric</b>
           <div className="fabricListGrid">
-            {NEW_FABRIC_LIST.map((value) => (
-              <img
-                src={value.color}
-                height={100}
-                width={100}
-                onClick={() => {
-                  setCustomization({
-                    ...customization,
-                    texture: value,
-                  });
-                }}
-              />
-            ))}
-
-            {/* {FABRIC_LIST.map((value) => (
+            {FABRIC_LIST.map((value) => (
               <>
                 <img
                   src={value}
@@ -52,7 +40,7 @@ function Configurator() {
                   }}
                 />
               </>
-            ))} */}
+            ))}
           </div>
         </div>
 

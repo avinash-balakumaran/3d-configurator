@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
 import Configurator from "./pages/Configurator";
+import SofaConfigurator from "./pages/SofaConfigurator";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/configurator" element={<Configurator />} />
+          <Route path="/sofa-configurator" element={<SofaConfigurator />} />
         </Routes>
       </BrowserRouter>
     </>

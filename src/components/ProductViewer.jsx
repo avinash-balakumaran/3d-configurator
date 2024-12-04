@@ -8,12 +8,13 @@ import {
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
-// import { ChairModel } from "./Scene";
-// import { Model } from "./SofaModel";
-import { Model } from "./SofaSetModel";
+import { ChairModel } from "./Scene";
+import { Model } from "./SofaModel";
+import { SofaSetModel } from "./SofaSetModel";
 
 function ProductViewer(props) {
-  const { customization, isConfigurator } = props;
+  const { customization, isConfigurator, isSofaConfigurator, configurator } =
+    props;
 
   return (
     <>
@@ -27,12 +28,15 @@ function ProductViewer(props) {
         <OrbitControls enableZoom={true} minDistance={2} maxDistance={10} />
         <Stage intensity={0.6} castShadow={false}>
           <Suspense fallback={null}>
-            <Model customization={customization} />
-            {/* {isConfigurator ? (
-              <Model customization={customization} />
-            ) : (
+            {configurator === "chair" && (
               <ChairModel customization={customization} />
-            )} */}
+            )}
+
+            {configurator === "sofa" && <Model customization={customization} />}
+
+            {configurator === "longSofa" && (
+              <SofaSetModel customization={customization} />
+            )}
           </Suspense>
         </Stage>
       </PresentationControls>
