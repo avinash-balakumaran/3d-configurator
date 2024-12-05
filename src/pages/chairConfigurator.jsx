@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import ProductViewer from "../components/ProductViewer";
 import { NEW_FABRIC_LIST, NEW_TEXTURE_LIST, WOOD_LIST } from "../constant/mock";
+import { XR, createXRStore } from "@react-three/xr";
 
 function ChairConfigurator() {
   const [customization, setCustomization] = useState({
@@ -10,15 +11,28 @@ function ChairConfigurator() {
     frameColor: "",
     meshColor: "",
   });
+  const store = createXRStore();
 
   return (
     <div className="app">
       <div className="productViewContainer">
+        <button
+          onClick={() => {
+            console.log("clicking");
+
+            store.enterAR();
+          }}
+        >
+          Start AR
+        </button>
+
         <Canvas>
-          <ProductViewer
-            customization={customization}
-            configurator="modernChair"
-          />
+          <XR store={store}>
+            <ProductViewer
+              customization={customization}
+              configurator="modernChair"
+            />
+          </XR>
         </Canvas>
       </div>
 
