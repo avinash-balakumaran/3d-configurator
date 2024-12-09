@@ -93,3 +93,19 @@ body {
   height: 2px;
   background: linear-gradient(90deg, transparent, #3498db, transparent);
 }
+
+@media screen and (max-width: 992px) {
+  .app {
+    flex-direction: column;
+    margin: 150px 0 0 0;
+  }
+
+  .productViewContainer {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .customizerContainer {
+    width: 100%;
+  }
+}

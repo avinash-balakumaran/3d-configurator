@@ -13,10 +13,8 @@ import * as THREE from "three";
 
 export function ModernChairModel(props) {
   const { nodes, materials } = useGLTF("chair_vasa/scene.gltf");
-  const { customization } = props;
+  const { customization, position = { x: 0, y: 0, z: 0 } } = props;
   let textureProps;
-
-  console.log(customization, "cuss");
 
   if (customization.fabric) {
     textureProps = useTexture({
@@ -27,11 +25,18 @@ export function ModernChairModel(props) {
     textureProps.map.wrapS = textureProps.map.wrapT = THREE.RepeatWrapping;
   }
 
+  console.log(position, "position");
+  console.log(position.x);
+  console.log(position.y);
+
+  const selectedPosition = [position.x, 0, 0];
+
   return (
-    <group {...props} dispose={null}>
-      <group scale={0.01}>
+    <group {...props} dispose={null} position={selectedPosition}>
+      <group scale={0.01} position={selectedPosition}>
         <group
-          position={[400, 0, -600]}
+          // position={[400, 0, -600]}
+          position={selectedPosition}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={100}
         >

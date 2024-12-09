@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import ProductViewer from "../components/ProductViewer";
 import { NEW_FABRIC_LIST, NEW_TEXTURE_LIST, WOOD_LIST } from "../constant/mock";
-import { XR, createXRStore } from "@react-three/xr";
+// import { XR, createXRStore } from "@react-three/xr";
+import { ARButton, XR, useHitTest } from "@react-three/xr";
+import AR from "../components/AR";
 
 function ChairConfigurator() {
   const [customization, setCustomization] = useState({
@@ -11,12 +13,12 @@ function ChairConfigurator() {
     frameColor: "",
     meshColor: "",
   });
-  const store = createXRStore();
+  // const store = createXRStore();
 
   return (
     <div className="app">
       <div className="productViewContainer">
-        <button
+        {/* <button
           onClick={() => {
             console.log("clicking");
 
@@ -24,14 +26,20 @@ function ChairConfigurator() {
           }}
         >
           Start AR
-        </button>
+        </button> */}
+        <ARButton
+          sessionInit={{
+            requiredFeatures: ["hit-test"],
+          }}
+        />
 
         <Canvas>
-          <XR store={store}>
-            <ProductViewer
+          <XR>
+            {/* <ProductViewer
               customization={customization}
               configurator="modernChair"
-            />
+            /> */}
+            <AR customization={customization} configurator="modernChair" />
           </XR>
         </Canvas>
       </div>
