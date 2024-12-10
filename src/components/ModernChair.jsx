@@ -25,11 +25,7 @@ export function ModernChairModel(props) {
     textureProps.map.wrapS = textureProps.map.wrapT = THREE.RepeatWrapping;
   }
 
-  console.log(position, "position");
-  console.log(position.x);
-  console.log(position.y);
-
-  const selectedPosition = [position.x, 0, 0];
+  const selectedPosition = [0, 0, 0];
 
   return (
     <group {...props} dispose={null} position={selectedPosition}>
@@ -37,7 +33,7 @@ export function ModernChairModel(props) {
         <group
           // position={[400, 0, -600]}
           position={selectedPosition}
-          rotation={[-Math.PI / 2, 0, 0]}
+          rotation={[-Math.PI / 2, 0, 3]}
           scale={100}
         >
           <mesh
