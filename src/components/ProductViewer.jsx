@@ -19,7 +19,6 @@ function ProductViewer(props) {
     props;
 
   const reticleRef = useRef();
-  useHitTest(() => {});
 
   return (
     <>
