@@ -43,7 +43,10 @@ export function ModernChairModel(props) {
             scale={[1, 1, 0.92]}
           >
             {customization.frameColor && (
-              <meshStandardMaterial color={customization.frameColor} />
+              <meshStandardMaterial
+                color={customization.frameColor}
+                opacity={0.8}
+              />
             )}
           </mesh>
           <mesh
@@ -60,7 +63,10 @@ export function ModernChairModel(props) {
             rotation={[0.273, 0, 0]}
           >
             {customization.meshColor && (
-              <meshStandardMaterial color={customization.meshColor} />
+              <meshStandardMaterial
+                color={customization.meshColor}
+                opacity={0.8}
+              />
             )}
           </mesh>
           <mesh
@@ -72,6 +78,9 @@ export function ModernChairModel(props) {
             <meshStandardMaterial
               color={customization.pillowColor}
               {...textureProps}
+              opacity={0.8}
+              metalness={0.5}
+              roughness={0.8}
             />
           </mesh>
           <mesh

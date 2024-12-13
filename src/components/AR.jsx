@@ -61,13 +61,18 @@ function AR(props) {
       )}
 
       {isPresenting && position && (
-        <mesh position={position}>
-          <ModernChairModel
-            customization={customization}
-            position={position}
-            scale={0.5}
-          />
-        </mesh>
+        <>
+          <ambientLight intensity={0.3} />
+          <directionalLight intensity={1} position={[1, 2, 3]} />
+
+          <mesh position={position}>
+            <ModernChairModel
+              customization={customization}
+              position={position}
+              scale={0.5}
+            />
+          </mesh>
+        </>
       )}
     </>
   );
