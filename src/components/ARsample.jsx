@@ -1,6 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "@google/model-viewer";
-import { Html } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import {
   PresentationControls,
@@ -20,7 +19,6 @@ function ARsample() {
     frameColor: "",
     meshColor: "",
   });
-  const button = useRef();
   const modelRef = useRef();
   const modelViewRef = useRef();
   const [blobUrl, setBlobUrl] = useState();
@@ -32,25 +30,35 @@ function ARsample() {
     exporter.parse(
       scene,
       (result) => {
-        if (result instanceof ArrayBuffer) {
-          const blob = new Blob([result], { type: "application/octet-stream" });
-          const url = URL.createObjectURL(blob);
-          setBlobUrl(url);
-        } else {
-          const blob = new Blob([JSON.stringify(result)], {
-            type: "application/json",
-          });
-          const url = URL.createObjectURL(blob);
-          setBlobUrl(url);
-        }
+        const blob = new Blob([JSON.stringify(result)], {
+          type: "application/json",
+        });
+
+        uploadToCloudinary(blob);
       },
       { binary: true }
     );
-
-    // button.current.click();
   };
 
-  console.log(blobUrl, "blob url");
+  const uploadToCloudinary = (blob) => {
+    const CLOUD_NAME = "dqqqzyw3c";
+    const UPLOAD_PRESET = "cloud_upload";
+
+    const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/raw/upload`;
+    const formData = new FormData();
+
+    formData.append("file", blob);
+    formData.append("upload_preset", UPLOAD_PRESET);
+
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setBlobUrl(res.secure_url);
+      });
+  };
 
   return (
     <div className="app">
@@ -149,7 +157,7 @@ function ARsample() {
 
       {blobUrl && (
         <model-viewer
-          src={"/chair_vasa/scene.gltf"}
+          src={blobUrl}
           alt="A 3D model"
           id="model-viewer"
           ar
