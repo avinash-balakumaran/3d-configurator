@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import Configurator from "./pages/Configurator";
 import SofaConfigurator from "./pages/SofaConfigurator";
 import ChairConfigurator from "./pages/chairConfigurator";
+import ARsample from "./components/ARsample";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/sofa-configurator" element={<SofaConfigurator />} />
 
           <Route path="chair-configurator" element={<ChairConfigurator />} />
+          <Route path="chair-sample" element={<ARsample />} />
         </Routes>
       </BrowserRouter>
     </>
