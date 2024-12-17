@@ -22,6 +22,7 @@ function ARsample() {
   const modelRef = useRef();
   const modelViewRef = useRef();
   const [blobUrl, setBlobUrl] = useState();
+  const [loading, setLoading] = useState(false);
 
   const exportModel = () => {
     const exporter = new GLTFExporter();
@@ -50,12 +51,15 @@ function ARsample() {
     formData.append("file", blob);
     formData.append("upload_preset", UPLOAD_PRESET);
 
+    setLoading(true);
+
     fetch(url, {
       method: "POST",
       body: formData,
     })
       .then((res) => res.json())
       .then((res) => {
+        setLoading(false);
         setBlobUrl(res.secure_url);
       });
   };
@@ -169,6 +173,10 @@ function ARsample() {
           {/* <button slot="ar-button" ref={button}></button> */}
         </model-viewer>
       )}
+
+      <div className={loading ? "loaderContainer" : "loaderHide"}>
+        <img src={"/loader.gif"} className={"loader"} />
+      </div>
     </div>
   );
 }
