@@ -71,3 +71,12 @@ export const NEW_TEXTURE_LIST = [
   "/assets/textures/Leather037_1K-JPG/Leather037_1K-JPG_Color.jpg",
   "/assets/textures/Fabric045_1K-JPG/Fabric045_1K-JPG_Color.jpg",
 ];
+
+export const models = [
+  "https://res.cloudinary.com/dqqqzyw3c/raw/upload/v1734523257/yt955hu2zyl675fnz6jv",
+  "https://res.cloudinary.com/dqqqzyw3c/raw/upload/v1734523325/p7zahvj8pwx1ruuhvnjq",
+  "https://res.cloudinary.com/dqqqzyw3c/raw/upload/v1734523373/zflztisd6h3najnqv2pp",
+  "https://res.cloudinary.com/dqqqzyw3c/raw/upload/v1734523475/tcd42lsdowbs3xgcuknt",
+  "https://res.cloudinary.com/dqqqzyw3c/raw/upload/v1734523515/ub2xn4h6nbq4xbx9onun",
+  "https://res.cloudinary.com/dqqqzyw3c/raw/upload/v1734523373/zflztisd6h3najnqv2pp",
+];

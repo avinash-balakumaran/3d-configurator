@@ -8,7 +8,12 @@ import {
   OrbitControls,
 } from "@react-three/drei";
 import { ModernChairModel } from "./ModernChair";
-import { NEW_FABRIC_LIST, NEW_TEXTURE_LIST, WOOD_LIST } from "../constant/mock";
+import {
+  NEW_FABRIC_LIST,
+  NEW_TEXTURE_LIST,
+  WOOD_LIST,
+  models,
+} from "../constant/mock";
 import "@google/model-viewer";
 import { GLTFExporter } from "three/examples/jsm/exporters/GLTFExporter";
 
@@ -25,6 +30,24 @@ function ARsample() {
   const [loading, setLoading] = useState(false);
 
   const exportModel = () => {
+    if (
+      customization.fabric &&
+      !customization.pillowColor &&
+      !customization.frameColor &&
+      !customization.meshColor
+    ) {
+      const index = NEW_TEXTURE_LIST.findIndex(
+        (value) => value === customization.fabric
+      );
+
+      console.log("aaa");
+
+      console.log(index);
+      console.log(models[index]);
+      setBlobUrl(models[index]);
+      return;
+    }
+
     const exporter = new GLTFExporter();
     const scene = modelRef.current.parent;
 
