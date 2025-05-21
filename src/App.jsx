@@ -4,13 +4,14 @@ import Configurator from "./pages/Configurator";
 import SofaConfigurator from "./pages/SofaConfigurator";
 import ChairConfigurator from "./pages/chairConfigurator";
 import ARsample from "./components/ARsample";
+import TestEmbed from "./pages/TestEmbed";
 
 function App() {
   return (
     <>
-      <div class="title-container">
+      {/* <div class="title-container">
         <h1 class="title">Ziffity Product Configurator</h1>
-      </div>
+      </div> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -19,6 +20,7 @@ function App() {
 
           <Route path="chair-configurator" element={<ChairConfigurator />} />
           <Route path="chair-sample" element={<ARsample />} />
+          <Route path="/test-embed" element={<TestEmbed />} />
         </Routes>
       </BrowserRouter>
     </>
