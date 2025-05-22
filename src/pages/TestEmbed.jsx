@@ -11,7 +11,7 @@ function TestEmbed() {
     };
   }, []);
 
-  return <div id="widget" data-url="/test-may-09"></div>;
+  return <div id="widget" data-url="/test-embed-script"></div>;
 }
 
 export default TestEmbed;
