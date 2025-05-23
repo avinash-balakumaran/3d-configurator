@@ -5,6 +5,7 @@ import SofaConfigurator from "./pages/SofaConfigurator";
 import ChairConfigurator from "./pages/chairConfigurator";
 import ARsample from "./components/ARsample";
 import TestEmbed from "./pages/TestEmbed";
+import TestIframe from "./components/TestIframe";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="chair-configurator" element={<ChairConfigurator />} />
           <Route path="chair-sample" element={<ARsample />} />
           <Route path="/test-embed" element={<TestEmbed />} />
+          <Route path="/test-iframe" element={<TestIframe />} />
         </Routes>
       </BrowserRouter>
     </>
